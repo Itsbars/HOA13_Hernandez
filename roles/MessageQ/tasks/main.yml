@@ -1,0 +1,10 @@
+- name: Install Message Queue
+  apt:
+    name: rabbitmq-server
+    state: present
+
+- name: Starting service
+  service:
+    name: rabbitmq-server.service
+    state: started
+    enabled: true
